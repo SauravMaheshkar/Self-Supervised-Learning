@@ -1,0 +1,1 @@
+The image used for testing was taken from Wikimedia commons ([Source](<https://commons.wikimedia.org/wiki/File:Grumpy_Cat_(14512777426).jpg>)) and was licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license.

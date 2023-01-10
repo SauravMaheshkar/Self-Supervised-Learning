@@ -2,6 +2,7 @@
 requirements:
 	pip install -U pip setuptools wheel
 	pip install -r requirements.txt
+	pre-commit install
 
 ## Delete all compiled Python files
 clean:
@@ -12,7 +13,7 @@ clean:
 
 ## Testing
 test:
-	pytest -v .
+	pytest --durations=0 -v .
 
 ## Basic linting
 lint:

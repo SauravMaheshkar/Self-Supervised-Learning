@@ -7,6 +7,8 @@ line-length = 88
 [tool.pylint.messages_control]
 disable = [
     "no-member",
+    "not-callable",
+    "abstract-method",
     "too-many-arguments",
     "too-few-public-methods",
     "no-else-return",
@@ -20,6 +22,10 @@ disable = [
 max-line-length = 88
 
 [[tool.mypy.overrides]]
+module = [
+    'tensorflow',
+    'torchvision'
+]
 ignore_missing_imports = true
 
 [tool.pytest.ini_options]
@@ -27,4 +33,10 @@ testpaths = ["tests"]
 filterwarnings = [
     "ignore::DeprecationWarning",
 	"ignore::UserWarning"
+]
+markers =[
+    "tensorflow: mark a test as a tensorflow related.",
+    "tensorflow_model: mark a test as a tensorflow model related.",
+    "pytorch: mark a test as a pytorch related.",
+    "pytorch_model: mark a test as a pytorch model related."
 ]
